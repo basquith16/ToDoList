@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ToDoList</title>
+    <script src="jquery-1.11.3.min.js"></script>
+    <link href="style.css" rel="stylesheet"/>
+    <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <div=id="document">
+    <header>
+      <h1><em>To Do List</em></h1>
+    <h2>You'd Better Hurry!</h2>
+  </header>
+  <div>
+    <form action="to-do" method="post">
+        <input type="checkbox">
+
+  </div>
+      </div>
+      <footer>
+        <textarea></textarea>
+        <button id="addTask">Add Task</button>
+      </footer>
+      <script>
+      var defaults = {
+        task: "task",
+        taskID: "task id",
+        formID: "form id",
+        dueDate: "data",
+        delete: "delete"
+      },
+        codes = {
+          "1" : '#inProgress',
+          "2" : '#complete'
+        };
+
+        var input = function(params) {
+        var parent = $(codes[params.code]),
+          wrapper;
+        if (!parent) {
+          return;
+        }
+      };
+        wrapper = $("<div />"), {
+          "class" : defaults.todoTask,
+          "id" : defaults.taskID + params.id,
+          "data": params.id
+        } .appendTo (wrapper);
+
+        $("<div />", {
+          "class" : defaults.todoDate,
+          "text": params.date
+        }).appendTo(wrapper);
+
+        generateElement({
+          id: "12",
+          code: "1",
+          title: "Task",
+          dueDate: "5/2/2014",
+});
+
+          var removeElement = function(params) {
+          $("#" + defaults.taskId + params.id).remove();
+};
+          var data = package.JSON(localStorage.getItem("todoData"));
+          localStorage.setItem("todoData", JSON.stringify(data));
+
+          var addItem = function() {
+            var inputs = $("#" + defaults.formId + " :input"),
+                errorMessage = "Title can not be empty",
+              taskId, task, dueDate, tempData;
+
+            if (inputs.length !== 4) {
+              return;
+            }
+
+            title = inputs[0].value;
+            description = inputs[1].value;
+            date = inputs[2].value;
+
+            if (!title) {
+              generateDialog(errorMessage);
+              return;
+            }
+
+            id = new Date().getTime();
+
+            tempData = {
+              id : id,
+              code: "1",
+              title: title,
+              dueDate: date,
+            };
+
+            data[id] = tempData;
+            localStorage.setItem("todoData", JSON.stringify(data));
+
+            generateElement(tempData);
+
+            inputs[0].value = "";
+            inputs[1].value = "";
+            inputs[2].value = "";
+          };
+</script>
+  </body>
+</html>

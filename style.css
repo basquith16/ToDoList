@@ -1,0 +1,56 @@
+body {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-image: url("http://wallpaperbeta.com/wallpaper_3840x2160/black_background_pattern_sheet_of_old_paper_ultra_3840x2160_hd-wallpaper-362657.jpg");
+  background-size: cover;
+}
+
+header {
+  text-align: center;
+  font-family: Cedarville Cursive;
+  line-height: 15px;
+  color: #720A00;
+  padding-bottom: 50px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+#document {
+  display: flex;
+  flex direction: row;
+  justify-content: center;
+}
+
+textarea {
+    height: 25px;
+  }
+
+#addTask {
+  border-radius: 30%;
+  border: 1px solid black;
+  background-color: #6E6F73;
+  opacity: .7;
+  height: 20px;
+  margin: 5px 0 0 10px;
+  color: white;
+}
+
+textarea {
+  background-color: white;
+  opacity: .2;
+  border: 1px solid black;
+  color: black;
+  font-size: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  
+}
