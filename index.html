@@ -12,18 +12,15 @@
   <body>
     <div=id="document">
     <header>
-      <h1><em>To Do List</em></h1>
+      <h1><em>Brian's To Do List</em></h1>
     <h2>You'd Better Hurry!</h2>
   </header>
-  <div id="strikethrough"></div>
     <form>
        <label>Add Task (Enter)</label>
        <input type="text" />
    </form>
    <ul></ul>
       </div>
-      <footer>
-      </footer>
       <script>
       $('form').submit(function () {
           if ($('input').val() !== '') {
@@ -37,7 +34,6 @@
           e.preventDefault();
           $(this).parent().wrap("<strike>");
           $(this).fadeOut("slow");
-
       });
 </script>
   </body>
