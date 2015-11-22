@@ -4,7 +4,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-image: url("http://wallpaperbeta.com/wallpaper_3840x2160/black_background_pattern_sheet_of_old_paper_ultra_3840x2160_hd-wallpaper-362657.jpg");
+  background-image: url("backgroundPic.jpg");
   background-size: cover;
   font-family: Cedarville Cursive;
 }
